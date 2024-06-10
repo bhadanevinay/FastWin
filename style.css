@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+    transition: background-color 0.5s;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-and-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.balance-info {
+    text-align: left;
+}
+
+.balance-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.balance-amount {
+    font-size: 32px;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.user-id {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    animation: slideInRight 1s ease-out;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.recharge-btn {
+    background-color: #28a745;
+}
+
+.recharge-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.withdraw-btn {
+    background-color: #dc3545;
+}
+
+.withdraw-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+
+.logout-btn {
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: red;
+}
+
+
+
+.horizontal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.horizontal-buttons .btn {
+    width: 48%;
+    background-color: #007bff;
+}
+
+.horizontal-buttons .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.image-section {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.full-width-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.full-width-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    animation: slideInUp 1s ease-out;
+}
+
+.grid-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-btn {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.img-btn:hover {
+    cursor: pointer;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Additional styling for text buttons */
+.text-btn {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: none;
+    margin: 10px;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+.text-btn img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+.text-btn:hover img {
+    transform: scale(1.1);
+}
+.text-btn .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.text-btn:hover .overlay {
+    opacity: 1;
+}
+
+/* Refer and Casino Buttons */
+.text-btn {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: none;
+    margin: 10px;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+.text-btn img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+.text-btn:hover img {
+    transform: scale(1.1);
+}
+.text-btn .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.text-btn:hover .overlay {
+    opacity: 1;
+}
+
+/* Game Buttons */
+.img-btn {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    margin: 10px;
+    padding: 0;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.img-btn span {
+    display: block;
+    padding: 10px;
+}
+.img-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}

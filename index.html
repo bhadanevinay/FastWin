@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastWin</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="heading">
+        <a class="back-button" href="#">< Login</a>
+    <div class="login-container">
+        <h1>FastWin</h1>
+        <form>
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" minlength="10" maxlength="10" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="5" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <div class="button-row">
+            <button>Create an account</button>
+            <button>Forgot Password</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var mobileNumber = document.getElementById('mobile').value;
+            var password = document.getElementById('password').value;
+            
+            if (mobileNumber === '0123456789' && password === '0123456789') {
+                window.location.href = 'next.html';
+            } else {
+                alert('Invalid mobile number or password. Please try again.');
+            }
+        });
+    </script>
+    
+</body>
+</html>

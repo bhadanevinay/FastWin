@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastWin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info-and-buttons">
+            <div class="balance-info">
+                <p class="balance-label">Balance</p>
+                <p class="balance-amount">₹10,000</p>
+                <p class="user-id">ID: 570852</p>
+            </div>
+            <div class="buttons">
+                <button class="btn recharge-btn" onclick="recharge()">Recharge</button>
+                <button class="btn withdraw-btn" onclick="withdraw()">Withdraw</button>
+            </div>
+        </div>
+
+        <div class="horizontal-buttons">
+            <button class="btn task-reward-btn" onclick="taskReward()">Task Reward</button>
+            <button class="btn check-in-btn" onclick="checkIn()">Check In</button>
+        </div>
+
+        <div class="image-section">
+            <a href="#" class="text-btn refer-btn">
+                <img src="refer.png" alt="Refer and Earn" class="full-width-img">
+                <div class="overlay">
+                    <p>Refer a friend and earn 250 bonus for each legitimate invite you send</p>
+                    <p>Register now! Upon invitation, the invitee will receive a reward of 20</p>
+                </div>
+            </a>
+            <a href="#" class="text-btn casino-btn">
+                <img src="casino.png" alt="Casino" class="full-width-img">
+                <div class="overlay">
+                    <p>EvolutionGames Live Casino</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-images">
+            <button class="img-btn" onclick="imageButtonClick(1)">
+                <span>FAST-PARITY</span>
+                <span>30 SEC</span>
+            </button>
+            <button class="img-btn" onclick="imageButtonClick(2)">
+                <span>HEAD AND TAIL</span>
+                <span>30 SEC</span>
+            </button>
+            <button class="img-btn" onclick="imageButtonClick(3)">
+                <span>PARITY</span>
+                <span>3 MIN</span>
+            </button>
+            <button class="img-btn" onclick="imageButtonClick(4)">
+                <span>DICE</span>
+                <span>1 MIN</span>
+            </button>
+            <button class="img-btn" onclick="imageButtonClick(5)">
+                <span>ANDAR BAHAR</span>
+                <span>1 MIN</span>
+            </button>
+            <button class="img-btn" onclick="imageButtonClick(6)">
+                <span>WHEELOCITY</span>
+                <span>30 SEC</span>
+            </button>
+            <button class="img-btn" onclick="imageButtonClick(7)">
+                <span>MINESWEEPER</span>
+                <span>INSTANT</span>
+            </button>
+            <button class="img-btn" onclick="imageButtonClick(8)">
+                <span>JetX</span>
+                <span>LAUNCHING SOON!</span>
+            </button>
+            
+                <button class="logout-btn" onclick="redirect()">Logout</button>
+            
+            
+        </div>
+    </div>
+    <script>
+        function redirect() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
