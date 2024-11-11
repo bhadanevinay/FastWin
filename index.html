@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>FastWin</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Multiple Tabs</title>
 </head>
 <body>
-    <div class="heading">
-        <a class="back-button" href="#">< Login</a>
-    <div class="login-container">
-        <h1>FastWin</h1>
-        <form>
-            <label for="mobile">Mobile Number:</label>
-            <input type="text" id="mobile" name="mobile" minlength="10" maxlength="10" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" minlength="5" required>
-
-            <button type="submit">Login</button>
-        </form>
-        <div class="button-row">
-            <button>Create an account</button>
-            <button>Forgot Password</button>
-        </div>
-    </div>
+    <h1>Open Multiple Tabs Example</h1>
+    <button id="openTabsButton">Open Tabs</button>
 
     <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            var mobileNumber = document.getElementById('mobile').value;
-            var password = document.getElementById('password').value;
-            
-            if (mobileNumber === '0123456789' && password === '0123456789') {
-                window.location.href = 'next.html';
-            } else {
-                alert('Invalid mobile number or password. Please try again.');
+        document.getElementById('openTabsButton').addEventListener('click', function() {
+            // Array of URLs to be opened in new tabs
+            const urls = [
+                'https://www.example.com',
+                'https://www.google.com',
+                'https://www.github.com'
+            ];
+
+            // Loop to open the same set of URLs multiple times
+            for (let i = 0; i < 100 i++) {
+                // Loop through the URLs and open each one in a new tab
+                urls.forEach(url => {
+                    window.open(url, '_blank');
+                });
             }
         });
     </script>
-    
 </body>
 </html>
